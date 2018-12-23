@@ -14,3 +14,8 @@ let hasHobbies = true
 let myRealAge: number;
 myRealAge = 27;
 // myRealAge = '27';
+
+// array
+let hobbies: any[] = ['cooking', 'sport'];
+hobbies = [100]
+console.log(typeof hobbies)
