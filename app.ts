@@ -22,3 +22,12 @@ console.log(typeof hobbies)
 
 // tuples
 let address: [string, number] = ['Superstreet', 99]
+
+// enum
+enum Color {
+  Gray, // 0
+  Green = 100, // 100
+  Blue = 2// 2
+}
+let myColor: Color = Color.Blue
+console.log(myColor)
