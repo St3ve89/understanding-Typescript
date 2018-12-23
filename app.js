@@ -51,3 +51,12 @@ var myMultiply;
 // myMultiply();
 myMultiply = multiply;
 console.log(myMultiply(5, 2));
+// objects
+var userData = {
+    name: 'Istvan',
+    age: 29
+};
+// userData = {
+//   a: 'Hello',
+//   b: 22
+// }
