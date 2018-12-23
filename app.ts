@@ -9,3 +9,8 @@ let age = 29;
 // boolean
 let hasHobbies = true
 // hasHobbies = 1
+
+// assign types
+let myRealAge: number;
+myRealAge = 27;
+// myRealAge = '27';
