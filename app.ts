@@ -19,3 +19,6 @@ myRealAge = 27;
 let hobbies: any[] = ['cooking', 'sport'];
 hobbies = [100]
 console.log(typeof hobbies)
+
+// tuples
+let address: [string, number] = ['Superstreet', 99]
