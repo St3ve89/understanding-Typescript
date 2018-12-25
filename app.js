@@ -76,4 +76,9 @@ var complex2 = {
 // union types
 var myRealRealAge = 27;
 myRealRealAge = "27";
-myRealRealAge = true;
+// myRealRealAge = true;
+// check types
+var finalValue = 30;
+if (typeof finalValue == "number") {
+    console.log("Final value is a number");
+}
