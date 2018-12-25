@@ -60,3 +60,8 @@ var myHobbies = ['Cooking', 'Sports'];
 // const hobby2 = myHobbies[1];
 var hobby1 = myHobbies[0], hobby2 = myHobbies[1];
 console.log(hobby1, hobby2);
+var newUserData = { userName: 'Istvan', newAge: 29 };
+// const userName = newUserData.userName;
+// const newAge = newUserData.newAge;
+var myNewName = newUserData.userName, myAge = newUserData.newAge;
+console.log(myNewName, myAge);

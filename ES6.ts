@@ -65,3 +65,10 @@ const myHobbies = ['Cooking', 'Sports'];
 // const hobby2 = myHobbies[1];
 const [hobby1, hobby2] = myHobbies
 console.log(hobby1, hobby2);
+
+
+const newUserData = {userName: 'Istvan', newAge: 29};
+// const userName = newUserData.userName;
+// const newAge = newUserData.newAge;
+const {userName: myNewName, newAge: myAge} = newUserData;
+console.log(myNewName, myAge);
