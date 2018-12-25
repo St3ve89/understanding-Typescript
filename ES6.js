@@ -23,3 +23,9 @@ var addNumbers = function (number1, number2) {
 console.log(addNumbers(10, 3));
 var multiplyNumbers = function (number1, number2) { return number1 * number2; };
 console.log(multiplyNumbers(10, 3));
+var greet = function () {
+    console.log("Hello!");
+};
+greet();
+var greetFriend = function (friend) { return console.log(friend); };
+greetFriend('Manu');
