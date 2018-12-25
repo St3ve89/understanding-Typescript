@@ -65,3 +65,9 @@ var newUserData = { userName: 'Istvan', newAge: 29 };
 // const newAge = newUserData.newAge;
 var myNewName = newUserData.userName, myAge = newUserData.newAge;
 console.log(myNewName, myAge);
+// Template Literals
+console.log("TEMPLATE LITERALS");
+var userName = 'Istvan';
+// const greeting = "Hello, I'm " + userName + " I'm so cool!";
+var greeting = "This is a heading!\nI'm " + userName + ".\nThis is cool!";
+console.log(greeting);
