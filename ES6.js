@@ -53,3 +53,10 @@ function makeArray(name) {
     return args;
 }
 console.log(makeArray('Istvan', 1, 2, 6));
+// Destructuring
+console.log("DESTRUCTURING");
+var myHobbies = ['Cooking', 'Sports'];
+// const hobby1 = myHobbies[0];
+// const hobby2 = myHobbies[1];
+var hobby1 = myHobbies[0], hobby2 = myHobbies[1];
+console.log(hobby1, hobby2);
