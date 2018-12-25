@@ -40,3 +40,8 @@ var countdown = function (start) {
     console.log("Done!", start);
 };
 countdown(20);
+// Rest & spread
+console.log("REST & SPREAD");
+var numbers = [1, 10, 99, -5];
+console.log(Math.max(33, 99, 10, -3));
+console.log(Math.max.apply(Math, numbers));
