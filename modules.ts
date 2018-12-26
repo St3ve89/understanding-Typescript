@@ -1,6 +1,6 @@
-import { newPI, calculateCirumcumference } from "./math/circle";
-import { calculateRectangle } from "./math/rectangle"
+import * as Circle from "./math/circle";
+import calc from "./math/rectangle"
 
-console.log(newPI)
-console.log(calculateCirumcumference(10))
-console.log(calculateRectangle(20, 50))
+console.log(Circle.newPI)
+console.log(Circle.calculateCirumcumference(10))
+console.log(calc(20, 50))

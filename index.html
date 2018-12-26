@@ -7,18 +7,18 @@
   <title>TypeScript</title>
 </head>
 <body>
-  <script src="node_modules/systemjs/dist/system.js"></script>
+  <script src="/node_modules/systemjs/dist/system.js"></script>
   <script>
-    System.import('./modules.js');
+    SystemJS.import('./modules.js');
 
-    // System.config({
-    //   baseURL: '/',
-    //   packages: {
-    //     '/': {
-    //       defaultJSExtensions: true,
-    //     }
-    //   }
-    // });
+    SystemJS.config({
+      baseURL: '/',
+      packages: {
+        '/': {
+          defaultJSExtensions: true,
+        }
+      }
+    });
   </script>
 </body>
 </html>

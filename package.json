@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/St3ve89/understanding-Typescript#readme",
   "dependencies": {
-    "systemjs": "^2.1.1"
+    "systemjs": "^0.21.5"
   }
 }
