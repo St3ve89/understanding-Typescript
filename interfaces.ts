@@ -39,3 +39,16 @@ myPerson.name = 'Agika';
 myPerson.lastName = 'Brettl'
 newgreet(myPerson);
 myPerson.greet(myPerson.lastName)
+
+// Function types
+
+interface doubleValueFunc {
+  (number1: number, number2: number): number;
+}
+
+let myDoubleFunction: doubleValueFunc;
+myDoubleFunction = function(value1: number, value2: number) {
+  return (value1 + value2) * 2
+}
+
+console.log(myDoubleFunction(10, 20))
