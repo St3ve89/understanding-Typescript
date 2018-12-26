@@ -1,3 +1,5 @@
+/// <reference path="circleMath.ts" />
+/// <reference path="rectangleMath.ts" />
 const PI = 3.12;
 
 console.log(MyMath.calculateRectangle(10,20));
