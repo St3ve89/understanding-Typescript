@@ -95,3 +95,21 @@ let newProject = new ITProject();
 console.log(newProject);
 newProject.changeName("Super IT project");
 console.log(newProject);
+
+// private constructor
+class OnlyOne {
+  private static instance: OnlyOne;
+
+  private constructor(public name: string) {}
+
+  static getInstance() {
+    if (!OnlyOne.instance) {
+      OnlyOne.instance = new OnlyOne('The only one');
+    }
+
+    return OnlyOne.instance;
+  }
+}
+
+let wrong = new OnlyOne('The only one');
+let right = OnlyOne.getInstance();

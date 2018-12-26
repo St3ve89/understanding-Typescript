@@ -1,10 +1,7 @@
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -110,3 +107,18 @@ var newProject = new ITProject();
 console.log(newProject);
 newProject.changeName("Super IT project");
 console.log(newProject);
+// private constructor
+var OnlyOne = /** @class */ (function () {
+    function OnlyOne(name) {
+        this.name = name;
+    }
+    OnlyOne.getInstance = function () {
+        if (!OnlyOne.instance) {
+            OnlyOne.instance = new OnlyOne('The only one');
+        }
+        return OnlyOne.instance;
+    };
+    return OnlyOne;
+}());
+var wrong = new OnlyOne('The only one');
+var right = OnlyOne.getInstance();
