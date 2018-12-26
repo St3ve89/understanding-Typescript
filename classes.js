@@ -36,7 +36,9 @@ var Istvan = /** @class */ (function (_super) {
     __extends(Istvan, _super);
     // name = 'Istvan';
     function Istvan(username) {
-        return _super.call(this, 'Istvan', username) || this;
+        var _this = _super.call(this, 'Istvan', username) || this;
+        _this.age = 31;
+        return _this;
     }
     return Istvan;
 }(Person));

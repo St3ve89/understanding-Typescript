@@ -29,6 +29,7 @@ class Istvan extends Person {
 
   constructor(username: string) {
     super('Istvan', username);
+    this.age = 31;
   }
 }
 
