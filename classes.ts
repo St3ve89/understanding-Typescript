@@ -35,3 +35,28 @@ class Istvan extends Person {
 
 const istvan = new Istvan('Agi');
 console.log(istvan)
+
+
+// Getters & setters
+class Plant {
+  private _species: string = 'Default';
+
+  get species() {
+    return this._species;
+  }
+
+  set species(value: string) {
+    if(value.length > 3) {
+      this._species = value;
+    } else {
+      this._species = 'Default';
+    }
+  }
+}
+
+let plant = new Plant();
+console.log(plant.species);
+plant.species = 'AB';
+console.log(plant.species);
+plant.species = 'Green Plant';
+console.log(plant.species);
