@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/St3ve89/understanding-Typescript/issues"
   },
-  "homepage": "https://github.com/St3ve89/understanding-Typescript#readme"
+  "homepage": "https://github.com/St3ve89/understanding-Typescript#readme",
+  "dependencies": {
+    "systemjs": "^2.1.1"
+  }
 }
