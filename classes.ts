@@ -25,8 +25,12 @@ person.printAge();
 
 // Inheritance
 class Istvan extends Person {
-  name = 'Istvan'
+  // name = 'Istvan';
+
+  constructor(username: string) {
+    super('Istvan', username);
+  }
 }
 
-const istvan = new Istvan('Agi', 'steve');
+const istvan = new Istvan('Agi');
 console.log(istvan)

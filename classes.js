@@ -34,12 +34,11 @@ person.printAge();
 // Inheritance
 var Istvan = /** @class */ (function (_super) {
     __extends(Istvan, _super);
-    function Istvan() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.name = 'Istvan';
-        return _this;
+    // name = 'Istvan';
+    function Istvan(username) {
+        return _super.call(this, 'Istvan', username) || this;
     }
     return Istvan;
 }(Person));
-var istvan = new Istvan('Agi', 'steve');
+var istvan = new Istvan('Agi');
 console.log(istvan);
