@@ -6,8 +6,12 @@ function changeName(userPerson) {
 }
 var userPerson = {
     name: 'Istvan',
-    hobbies: ['Cooking', 'Sports']
+    hobbies: ['Cooking', 'Sports'],
+    greet: function (lastName) {
+        console.log('Hi, I am ' + this.name + ' ' + lastName);
+    }
 };
-newgreet({ name: 'Istvan', age: 29 });
+// newgreet({name: 'Istvan', age: 29});
 changeName(userPerson);
 newgreet(userPerson);
+userPerson.greet('anything');
