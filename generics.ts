@@ -21,3 +21,10 @@ const testResult: Array<number> =  [1.94 , 2.33];
 testResult.push(-2.99);
 // testResult.push("string");   Won't work
 console.log(testResult);
+
+// Arrays
+function printAll<T>(args: T[]) {
+  args.forEach(element => console.log(element));
+}
+
+printAll<string>(['Apple', 'Banana']);

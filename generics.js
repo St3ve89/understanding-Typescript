@@ -17,3 +17,8 @@ var testResult = [1.94, 2.33];
 testResult.push(-2.99);
 // testResult.push("string");   Won't work
 console.log(testResult);
+// Arrays
+function printAll(args) {
+    args.forEach(function (element) { return console.log(element); });
+}
+printAll(['Apple', 'Banana']);
