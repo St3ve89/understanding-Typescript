@@ -33,3 +33,17 @@ printAll<string>(['Apple', 'Banana']);
 const echo2: <T>(data: T) => T = betterEcho;
 
 console.log(echo2<string>('Something'));
+
+// generic class
+class SimpleMath<T> {
+  baseValue: T;
+  multiplyValue: T;
+  caluclate(): number {
+    return +this.baseValue * +this.multiplyValue;
+  }
+}
+
+const simpleMath = new SimpleMath();
+simpleMath.baseValue = 10;
+simpleMath.multiplyValue = 20;
+console.log(simpleMath.caluclate());

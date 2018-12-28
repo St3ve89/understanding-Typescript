@@ -25,3 +25,16 @@ printAll(['Apple', 'Banana']);
 // generic types
 var echo2 = betterEcho;
 console.log(echo2('Something'));
+// generic class
+var SimpleMath = /** @class */ (function () {
+    function SimpleMath() {
+    }
+    SimpleMath.prototype.caluclate = function () {
+        return +this.baseValue * +this.multiplyValue;
+    };
+    return SimpleMath;
+}());
+var simpleMath = new SimpleMath();
+simpleMath.baseValue = 10;
+simpleMath.multiplyValue = 20;
+console.log(simpleMath.caluclate());
