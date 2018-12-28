@@ -28,3 +28,8 @@ function printAll<T>(args: T[]) {
 }
 
 printAll<string>(['Apple', 'Banana']);
+
+// generic types
+const echo2: <T>(data: T) => T = betterEcho;
+
+console.log(echo2<string>('Something'));
