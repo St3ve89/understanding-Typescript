@@ -36,5 +36,5 @@ var SimpleMath = /** @class */ (function () {
 }());
 var simpleMath = new SimpleMath();
 simpleMath.baseValue = '10';
-simpleMath.multiplyValue = '20';
+simpleMath.multiplyValue = 20;
 console.log(simpleMath.caluclate());
