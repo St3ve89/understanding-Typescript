@@ -16,3 +16,15 @@ var NewPerson = /** @class */ (function () {
     ], NewPerson);
     return NewPerson;
 }());
+// Factory
+function logging(value) {
+    return value ? logged : null;
+}
+var Car = /** @class */ (function () {
+    function Car() {
+    }
+    Car = __decorate([
+        logging(true)
+    ], Car);
+    return Car;
+}());
