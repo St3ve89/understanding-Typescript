@@ -46,3 +46,27 @@ var NewPlant = /** @class */ (function () {
 }());
 var newPlant = new NewPlant();
 newPlant.print();
+// method decorator
+function editable(value) {
+    return function (target, propName, descriptor) {
+        descriptor.writable = value;
+    };
+}
+var NewProject = /** @class */ (function () {
+    function NewProject(name) {
+        this.projectName = name;
+    }
+    NewProject.prototype.calcBudget = function () {
+        console.log(1000);
+    };
+    __decorate([
+        editable(false)
+    ], NewProject.prototype, "calcBudget");
+    return NewProject;
+}());
+var newNewProject = new NewProject("Super project");
+newNewProject.calcBudget();
+newNewProject.calcBudget = function () {
+    console.log(2000);
+};
+newNewProject.calcBudget();
