@@ -20,13 +20,13 @@ var NewPerson = /** @class */ (function () {
 function logging(value) {
     return value ? logged : null;
 }
-var Car = /** @class */ (function () {
-    function Car() {
+var NewCar = /** @class */ (function () {
+    function NewCar() {
     }
-    Car = __decorate([
+    NewCar = __decorate([
         logging(true)
-    ], Car);
-    return Car;
+    ], NewCar);
+    return NewCar;
 }());
 // Advanced
 function printable(constructorFn) {
@@ -46,3 +46,38 @@ var NewPlant = /** @class */ (function () {
 }());
 var newPlant = new NewPlant();
 newPlant.print();
+// method decorator
+// property decorator
+function editable(value) {
+    return function (target, propName, descriptor) {
+        descriptor.writable = value;
+    };
+}
+function overwritable(value) {
+    return function (target, propName) {
+        var newDescriptor = {
+            writable: value
+        };
+        return newDescriptor;
+    };
+}
+var NewProject = /** @class */ (function () {
+    function NewProject(name) {
+        this.projectName = name;
+    }
+    // @editable(false)
+    NewProject.prototype.calcBudget = function () {
+        console.log(1000);
+    };
+    __decorate([
+        overwritable(false)
+    ], NewProject.prototype, "projectName");
+    return NewProject;
+}());
+var project = new NewProject("Super Project");
+project.calcBudget();
+project.calcBudget = function () {
+    console.log(2000);
+};
+project.calcBudget();
+console.log(project);

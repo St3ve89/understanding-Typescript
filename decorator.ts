@@ -15,7 +15,7 @@ function logging(value: boolean) {
 }
 
 @logging(true)
-class Car {
+class NewCar {
 
 }
 
@@ -32,3 +32,41 @@ class NewPlant {
 }
 const newPlant = new NewPlant();
 (<any>newPlant).print();
+
+// method decorator
+// property decorator
+function editable(value: boolean) {
+  return function (target: any, propName: string, descriptor: PropertyDescriptor):any {
+      descriptor.writable = value;
+  }
+}
+
+function overwritable(value: boolean) {
+  return function(target:any, propName: string): any {
+    const newDescriptor: PropertyDescriptor = {
+      writable: value
+    };
+    return newDescriptor;
+  }
+}
+class NewProject {
+  @overwritable(false)
+  projectName: string;
+
+  constructor(name: string) {
+      this.projectName = name;
+  }
+
+  // @editable(false)
+  calcBudget() {
+      console.log(1000);
+  }
+}
+
+const project = new NewProject("Super Project");
+project.calcBudget();
+project.calcBudget = function () {
+  console.log(2000);
+};
+project.calcBudget();
+console.log(project);
