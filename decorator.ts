@@ -25,7 +25,7 @@ function printable(constructorFn: Function) {
     console.log(this);
   }
 }
-
+@logging(true)
 @printable
 class NewPlant {
   name = "Green Plant";
