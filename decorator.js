@@ -28,3 +28,20 @@ var Car = /** @class */ (function () {
     ], Car);
     return Car;
 }());
+// Advanced
+function printable(constructorFn) {
+    constructorFn.prototype.print = function () {
+        console.log(this);
+    };
+}
+var NewPlant = /** @class */ (function () {
+    function NewPlant() {
+        this.name = "Green Plant";
+    }
+    NewPlant = __decorate([
+        printable
+    ], NewPlant);
+    return NewPlant;
+}());
+var newPlant = new NewPlant();
+newPlant.print();
