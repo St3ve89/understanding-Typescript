@@ -4,6 +4,7 @@ var csvFileReader_1 = require("./csvFileReader");
 var matchResult_1 = require("./matchResult");
 var reader = new csvFileReader_1.CsvFileReader('football.csv');
 reader.read();
+console.log(reader.data[0][0]);
 var manUnitedWins = 0;
 for (var _i = 0, _a = reader.data; _i < _a.length; _i++) {
     var match = _a[_i];
