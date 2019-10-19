@@ -8,4 +8,3 @@ var Summary = /** @class */ (function () {
     return Summary;
 }());
 exports.Summary = Summary;
-new Summary(new WinsAnalysis(), new ConsoleReport());
